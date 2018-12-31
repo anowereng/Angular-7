@@ -1,0 +1,53 @@
+<form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header bg-secondary text-white"> Category Add / List</div>
+
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <div class="row">
+
+
+          <div class="col-sm-6">
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Category Id </label>
+              <div class="col-sm-8">
+                <input type="text" formControlName="id" class="form-control" placeholder="(auto generate)" disabled>
+              </div>
+            </div><!--form-group end-->
+
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Category Name </label>
+              <div class="col-sm-8">
+                <input type="text" formControlName="name" class="form-control" placeholder="category name">
+              </div>
+            </div><!--form-group  end-->
+            <div class="form-group ">
+              <div class="col-sm-7 pr-md-5">
+                <button type="submit" class="btn btn-blcok btn-secondary float-right">Submit</button>
+              </div>
+            </div>
+
+            </div>
+
+          <div class="col-sm-6">
+            <ag-grid-angular style="width: 500px; height: 300px;"
+                             class="ag-theme-balham"
+                             [rowData]="rowData"
+                             [enableFilter]="true"
+                             [pagination]="true"
+                             [columnDefs]="columnDefs">
+            </ag-grid-angular>
+          </div>
+
+        </div><!--row end-->
+      </div> <!-- card body:end-->
+      
+      <!--<div class="card-footer text-muted">
+        <button type="submit" class="btn btn-blcok btn-secondary">Submit</button>
+      </div>-->
+    </div> <!--End: card-->
+  </div><!--div6 end-->
+
+
+</form>

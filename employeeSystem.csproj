@@ -1,0 +1,152 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+    <!-- Set this to true if you enable server-side prerendering -->
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+      <PackageReference Include="Microsoft.Net.Compilers" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\.git\**" />
+    <Compile Remove="ClientApp\dist\**" />
+    <Compile Remove="ClientApp\e2e\**" />
+    <Compile Remove="ClientApp\src\assets\**" />
+    <Compile Remove="ClientApp\src\environments\**" />
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\.git\**" />
+    <Content Remove="ClientApp\dist\**" />
+    <Content Remove="ClientApp\e2e\**" />
+    <Content Remove="ClientApp\src\assets\**" />
+    <Content Remove="ClientApp\src\environments\**" />
+    <EmbeddedResource Remove="ClientApp\.git\**" />
+    <EmbeddedResource Remove="ClientApp\dist\**" />
+    <EmbeddedResource Remove="ClientApp\e2e\**" />
+    <EmbeddedResource Remove="ClientApp\src\assets\**" />
+    <EmbeddedResource Remove="ClientApp\src\environments\**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\.git\**" />
+    <None Remove="ClientApp\dist\**" />
+    <None Remove="ClientApp\e2e\**" />
+    <None Remove="ClientApp\src\assets\**" />
+    <None Remove="ClientApp\src\environments\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\.git\config" />
+    <None Remove="ClientApp\.git\description" />
+    <None Remove="ClientApp\.git\HEAD" />
+    <None Remove="ClientApp\.git\hooks\applypatch-msg.sample" />
+    <None Remove="ClientApp\.git\hooks\commit-msg.sample" />
+    <None Remove="ClientApp\.git\hooks\post-update.sample" />
+    <None Remove="ClientApp\.git\hooks\pre-applypatch.sample" />
+    <None Remove="ClientApp\.git\hooks\pre-commit.sample" />
+    <None Remove="ClientApp\.git\hooks\pre-push.sample" />
+    <None Remove="ClientApp\.git\hooks\pre-rebase.sample" />
+    <None Remove="ClientApp\.git\hooks\pre-receive.sample" />
+    <None Remove="ClientApp\.git\hooks\prepare-commit-msg.sample" />
+    <None Remove="ClientApp\.git\hooks\update.sample" />
+    <None Remove="ClientApp\.git\index" />
+    <None Remove="ClientApp\.git\info\exclude" />
+    <None Remove="ClientApp\.git\objects\0a\a8de9013d50a21a33d6fa6f298f8d03cb22460" />
+    <None Remove="ClientApp\.git\objects\0c\856743e2955af842385c9953762f1e8c634475" />
+    <None Remove="ClientApp\.git\objects\0f\3d9d8b9f8e1a938befbfea5ac8bc11494ea709" />
+    <None Remove="ClientApp\.git\objects\16\317897b1c50a3a71bc775a8d6429f2b4c6cf98" />
+    <None Remove="ClientApp\.git\objects\19\0fd300b601e168a3d185dbfa2758ab73257479" />
+    <None Remove="ClientApp\.git\objects\1e\6f2a726325d3b4446135693953607fdc90e39b" />
+    <None Remove="ClientApp\.git\objects\29\8d6937277371df0caf29dc242403d5a79b1940" />
+    <None Remove="ClientApp\.git\objects\2c\3ba2995c8510c02ca812f90280146738f162cf" />
+    <None Remove="ClientApp\.git\objects\36\12073bc31cd4c1f5d6cbb00318521e9a61bd8a" />
+    <None Remove="ClientApp\.git\objects\37\371cb04b9f1986d952499cdf9613c9d5d8ca8c" />
+    <None Remove="ClientApp\.git\objects\52\e2c1a5a74ce268bec92d34cd3bca751624adb3" />
+    <None Remove="ClientApp\.git\objects\62\d51d62b33ea867857ae1f8c3b8537c2006f3ea" />
+    <None Remove="ClientApp\.git\objects\66\fed767b0a0795ab2ff90f7485955e6b633dc4f" />
+    <None Remove="ClientApp\.git\objects\70\5cba09835a7a4ec6527fe051953a0414e2aeb5" />
+    <None Remove="ClientApp\.git\objects\72\e463a33539a15bd3e028aaa22c697fc647b9a6" />
+    <None Remove="ClientApp\.git\objects\7b\4f817adb754769ca126a939d48ac4b0850489d" />
+    <None Remove="ClientApp\.git\objects\80\81c7ceaf2be08bf59010158c586170d9d2d517" />
+    <None Remove="ClientApp\.git\objects\85\158b7a442a3c56e7dc79d4b99d6cfc22dc119d" />
+    <None Remove="ClientApp\.git\objects\86\776a391a5b48b32506eb0fa62b15ed6c926b69" />
+    <None Remove="ClientApp\.git\objects\90\d4ee0072ce3fc41812f8af910219f9eea3c3de" />
+    <None Remove="ClientApp\.git\objects\9d\58f5bea264080358636e3f73b9ee5e041d5204" />
+    <None Remove="ClientApp\.git\objects\a6\d34ea67a3b3f272c49f536204510a41f156c6a" />
+    <None Remove="ClientApp\.git\objects\a6\dd6220282460dae17d69fc030b94ab1e81d960" />
+    <None Remove="ClientApp\.git\objects\a9\eaedc7492aa5ab5ed5a5825e1134bb797b8a00" />
+    <None Remove="ClientApp\.git\objects\b2\71fd9f3d55adf81bfd0da7d83de3eb88b7e191" />
+    <None Remove="ClientApp\.git\objects\c4\79eca75961a566652e18b6b6a9ab80cb97d2bd" />
+    <None Remove="ClientApp\.git\objects\c7\40a7b2a5956632c8e9c493f96c053377dcc3f0" />
+    <None Remove="ClientApp\.git\objects\c7\b673cf44b388e9989fe908b78d7d73cd2e1409" />
+    <None Remove="ClientApp\.git\objects\d1\525a4ad194518459de7587ef80e9cdafac7ef9" />
+    <None Remove="ClientApp\.git\objects\d4\25c6f56b578db1e8d7f8fa2d6c90693ba5d4fb" />
+    <None Remove="ClientApp\.git\objects\d5\64d0bc3dd917926892c55e3706cc116d5b165e" />
+    <None Remove="ClientApp\.git\objects\d5\e739379f4bc7d48bba242535f3cba5e6339263" />
+    <None Remove="ClientApp\.git\objects\de\7733630eb224b246854a20934f792051926e8f" />
+    <None Remove="ClientApp\.git\objects\df\ec9fe766b9e97ad5abf51fac5f1fe9e3c08850" />
+    <None Remove="ClientApp\.git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391" />
+    <None Remove="ClientApp\.git\objects\e8\9330a618c137cdaccde46f87923736cc04dfb4" />
+    <None Remove="ClientApp\.git\objects\ee\9caa152d7b1252ade99b13a3f0081ea1f4d21b" />
+    <None Remove="ClientApp\.git\objects\f9\da57954d06fdfbb16b00c6b2d3777a3a399eb2" />
+    <None Remove="ClientApp\dist\ClientApp\3rdpartylicenses.txt" />
+    <None Remove="ClientApp\dist\ClientApp\favicon.ico" />
+    <None Remove="ClientApp\dist\ClientApp\index.html" />
+    <None Remove="ClientApp\dist\ClientApp\main.1061b85647c14cddaf11.js" />
+    <None Remove="ClientApp\dist\ClientApp\polyfills.1ef83d22ada557f4a131.js" />
+    <None Remove="ClientApp\dist\ClientApp\runtime.ec2944dd8b20ec099bf3.js" />
+    <None Remove="ClientApp\dist\ClientApp\scripts.806effac119676237f10.js" />
+    <None Remove="ClientApp\dist\ClientApp\styles.ad5b405b703522cc8290.css" />
+    <None Remove="ClientApp\e2e\protractor.conf.js" />
+    <None Remove="ClientApp\e2e\src\app.e2e-spec.ts" />
+    <None Remove="ClientApp\e2e\src\app.po.ts" />
+    <None Remove="ClientApp\e2e\tsconfig.e2e.json" />
+    <None Remove="ClientApp\src\assets\.gitkeep" />
+    <None Remove="ClientApp\src\environments\environment.prod.ts" />
+    <None Remove="ClientApp\src\environments\environment.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Sampan">
+      <HintPath>Sampan.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>

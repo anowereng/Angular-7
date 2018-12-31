@@ -1,0 +1,46 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="col-sm-6 offset-md-3 mt-5">
+    <div class="card">
+      <div class="card-header bg-secondary text-white"> Employee Add</div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="text" formControlName="fullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                   placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Email</label>
+            <input type="email" formControlName="email" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+        </div>
+        <!--  NESTED FORM GROUP -->
+        <!-- <div class="col-md-12" formGroupName="employeeSkills">
+          <table class="table table-bordered table-stripped">
+            <thead>
+              <tr>
+                <th>Skill Name</th>
+                <th>Skill Experience</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    <input type="text" formControlName="skillName" class="form-control"  placeholder="Enter email">
+                </td>
+                <td>
+                  <input type="text" formControlName="skillExperience" class="form-control"  placeholder="Enter email">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div> -->
+
+      </div> <!-- card body:end-->
+      <div class="card-footer text-muted">
+        <button type="submit" class="btn btn-blcok btn-secondary">Submit</button>
+      </div>
+    </div> <!--End: card-->
+  </div><!--div6 end-->
+</form>

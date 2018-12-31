@@ -1,0 +1,19 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Angular 4+ HttpClient Examples
+  </h1>
+</div>
+<h2>HttpClient Get </h2>
+<ul>
+  <li>
+
+    <div *ngFor="let cust of items">
+      <a [routerLink]="['/customers', cust.id]" style="color:black">
+      <span class="badge badge-dark">{{cust.itemName}}</span> -> {{ cust.itemId }}</a>
+    </div>
+  </li>
+  <li>
+    <hr />
+  </li>
+</ul>
